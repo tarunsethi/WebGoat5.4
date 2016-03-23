@@ -1,0 +1,34 @@
+
+<b:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:b="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+           
+  <http pattern="hjh" security="none" disable-url-rewriting="false">
+  	<intercept-url pattern="hdjhj" access="permitAll" filters="none" requires-channel="any"/>
+  	
+  </http>         
+  <authentication-manager>
+  	<authentication-provider>
+  		<password-encoder hash="sha-256">
+  			
+  			
+  		</password-encoder>
+  	</authentication-provider>
+  </authentication-manager>
+  
+  <b:bean id="hjh" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+  	<b:constructor-arg name="strength" value="1"/>
+  </b:bean>
+  
+  <b:bean id="hjh1" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+  	<b:constructor-arg name="strength" value="256"/>
+  </b:bean>
+  
+  <debug/>
+  
+    
+</b:beans>
