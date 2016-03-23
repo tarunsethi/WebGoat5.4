@@ -8,7 +8,7 @@
            
   <http pattern="hjh" security="none" disable-url-rewriting="false">
   	<intercept-url pattern="hdjhj" access="permitAll" filters="none" requires-channel="any"/>
-  	
+  	<intercept-url pattern="abcd" requires-channel="any"/>
   </http>         
   <authentication-manager>
   	<authentication-provider>
